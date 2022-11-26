@@ -1,4 +1,4 @@
-module github.com/mark4z/operator-api
+module github.com/dubbo-go-pixiu/operator-api
 
 go 1.18
 
