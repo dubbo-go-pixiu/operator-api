@@ -6,6 +6,48 @@
   },
   "components": {
     "schemas": {
+      "dubbo.networking.v1alpha1.GetServiceMetadataRequest": {
+        "type": "object",
+        "properties": {
+          "namespace": {
+            "type": "string"
+          },
+          "applicationName": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          }
+        }
+      },
+      "dubbo.networking.v1alpha1.GetServiceMetadataResponse": {
+        "type": "object",
+        "properties": {
+          "metadataInfo": {
+            "type": "string"
+          }
+        }
+      },
+      "dubbo.networking.v1alpha1.PublishServiceMetadataRequest": {
+        "type": "object",
+        "properties": {
+          "namespace": {
+            "type": "string"
+          },
+          "applicationName": {
+            "type": "string"
+          },
+          "revision": {
+            "type": "string"
+          },
+          "metadataInfo": {
+            "type": "string"
+          }
+        }
+      },
+      "dubbo.networking.v1alpha1.PublishServiceMetadataResponse": {
+        "type": "object"
+      },
       "dubbo.networking.v1alpha1.ServiceMappingRequest": {
         "description": "When dubbo provider start up, it reports its applicationName and its interfaceName, and Dubbo consumer will get the service name mapping info by xDS.",
         "type": "object",

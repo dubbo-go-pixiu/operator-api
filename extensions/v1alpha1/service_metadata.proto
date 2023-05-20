@@ -1,0 +1,62 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+syntax = "proto3";
+
+// $schema: istio.extensions.v1alpha1.ServiceMetadata
+// $title: Service Metadata
+// $description: it's the spec of Service Metadata
+
+// `Service Metadata`
+
+package istio.extensions.v1alpha1;
+
+option go_package="istio.io/api/extensions/v1alpha1";
+
+//
+// <!-- crd generation tags
+// +cue-gen:ServiceMetadata:groupName:extensions.istio.io
+// +cue-gen:ServiceMetadata:version:v1alpha1
+// +cue-gen:ServiceMetadata:storageVersion
+// +cue-gen:ServiceMetadata:annotations:helm.sh/resource-policy=keep
+// +cue-gen:ServiceMetadata:labels:app=istio-pilot,chart=istio,heritage=Tiller,release=istio
+// +cue-gen:ServiceMetadata:subresource:status
+// +cue-gen:ServiceMetadata:scope:Namespaced
+// +cue-gen:ServiceMetadata:resource:categories=istio-io,extensions-istio-io,shortNames=sm,plural=servicemetadatas
+// +cue-gen:ServiceMetadata:printerColumn:name=Age,type=date,JSONPath=.metadata.creationTimestamp,description="CreationTimestamp is a timestamp
+// representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations.
+// Clients may not set this value. It is represented in RFC3339 form and is in UTC.
+// Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata"
+// +cue-gen:ServiceMetadata:preserveUnknownFields:false
+// -->
+//
+// <!-- go code generation tags
+// +kubetype-gen
+// +kubetype-gen:groupVersion=extensions.istio.io/v1alpha1
+// +genclient
+// +k8s:deepcopy-gen=true
+// -->
+message ServiceMetadata{
+  // ApplicationName
+  string application_name = 1;
+  // Revision
+  string revision = 2;
+  // MetadataInfo
+  string metadata_info = 3;
+}
+
+
