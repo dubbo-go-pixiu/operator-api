@@ -1,0 +1,29 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "it's the spec of Service Metadata",
+    "version": "v1alpha1"
+  },
+  "components": {
+    "schemas": {
+      "istio.extensions.v1alpha1.ServiceMetadata": {
+        "description": "\u003c!-- crd generation tags +cue-gen:ServiceMetadata:groupName:extensions.istio.io +cue-gen:ServiceMetadata:version:v1alpha1 +cue-gen:ServiceMetadata:storageVersion +cue-gen:ServiceMetadata:annotations:helm.sh/resource-policy=keep +cue-gen:ServiceMetadata:labels:app=istio-pilot,chart=istio,heritage=Tiller,release=istio +cue-gen:ServiceMetadata:subresource:status +cue-gen:ServiceMetadata:scope:Namespaced +cue-gen:ServiceMetadata:resource:categories=istio-io,extensions-istio-io,shortNames=sm,plural=servicemetadatas +cue-gen:ServiceMetadata:printerColumn:name=Age,type=date,JSONPath=.metadata.creationTimestamp,description=\"CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC. Populated by the system. Read-only. Null for lists. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#metadata\" +cue-gen:ServiceMetadata:preserveUnknownFields:false --\u003e",
+        "type": "object",
+        "properties": {
+          "applicationName": {
+            "description": "ApplicationName",
+            "type": "string"
+          },
+          "revision": {
+            "description": "Revision",
+            "type": "string"
+          },
+          "metadataInfo": {
+            "description": "MetadataInfo",
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
